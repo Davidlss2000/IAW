@@ -18,5 +18,5 @@ Foreach ($Valor in $titulos){
 
 $web = Invoke-WebRequest  "https://www.20minutos.es"
 $contenido= $web.AllElements| where class -EQ "flex-h flex--4 js_fixed_container" | select  -Skip 1 | Out-File -FilePath C:\Users\David\Desktop\Examen1\datos.txt
-cd C:\xampp\htdocs\wp\$Valor
-php.exe C:\xampp\php\wp-cli.phar post create --post_title="Contenido" --post_content="$contenido" --post_type="post" --menu_order=7 
+cd C:\xampp1\htdocs\wp\$Valor
+php.exe C:\xampp1\php\wp-cli.phar post create --post_title="Contenido" --post_content="$contenido" --post_type="post" --menu_order=7 
